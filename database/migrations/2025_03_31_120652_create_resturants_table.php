@@ -14,6 +14,10 @@ return new class extends Migration
         Schema::create('restaurants', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->foreignId("city_id")->constrained();
+            $table->string('name');
+            $table->string('address');
+            $table->text('description');
         });
     }
 
