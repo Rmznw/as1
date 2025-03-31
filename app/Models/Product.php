@@ -4,16 +4,12 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Reservation extends Model
-
-
+class Product extends Model
 {
-    public function user(){
-        return $this->BelongsTo(User::class);
-
-    }
     public function restaurant(){
         return $this->BelongsTo(Resturant::class);
-
-    } //
+    }
+    public function category(){
+        return $this->BelongsTo(Category::class);
+    }
 }
