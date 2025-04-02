@@ -14,18 +14,14 @@ class DatabaseSeeder extends Seeder
 {
     public function run():
     void
-    {
-        $this->call([
+    {       User::factory(30)->create();
+            $this->call([
             CategorySeeder::class,
             CitySeeder::class,
-            Product::class,
         ]);
+            Restaurant::factory(20)
+            ->has(Reservation::factory()->count(100))->create();
 
-
-        Category::factory()
-            ->count(5)
-            ->has(Product::factory()->count(50))
-            ->create();
 
         Product::factory()
             ->count(50)
