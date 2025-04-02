@@ -10,8 +10,9 @@ class RestaurantFactory extends Factory
 
     public function definition(): array
     {
+        $city = City::inRandomOrder()->first();
         return [
-            'city_id'=>City::factory(),
+            'city_id'=>$city->id,
             'name'=>fake()->company(),
             'address'=>fake()->address(),
             'description'=>fake()->paragraph(),

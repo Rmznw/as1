@@ -2,8 +2,6 @@
 
 namespace Database\Seeders;
 
-use App\Models\Category;
-use App\Models\City;
 use App\Models\Product;
 use App\Models\Reservation;
 use App\Models\Restaurant;
@@ -12,32 +10,34 @@ use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
 {
-    public function run():
-    void
-    {       User::factory(30)->create();
-            $this->call([
+    public function run(): void
+{       User::factory(30)->create();
+        $this->call([
             CategorySeeder::class,
             CitySeeder::class,
         ]);
-            Restaurant::factory(20)
-            ->has(Reservation::factory()->count(100))->create();
 
-
-        Product::factory()
-            ->count(50)
-            ->create();
+        Restaurant::factory(20)->create();
 
 
 
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com'
-            ]);
 
 
-        Reservation::factory()
-            ->count(100)
-            ->create();
+//        Product::factory()
+//            ->count(50)
+//            ->create();
+//
+//
+//
+//        User::factory()->create([
+//            'name' => 'Test User',
+//            'email' => 'test@example.com'
+//            ]);
+//
+//
+////        Reservation::factory()
+//            ->count(100)
+//            ->create();
 
     }
 }
