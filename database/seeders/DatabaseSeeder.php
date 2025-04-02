@@ -23,21 +23,21 @@ class DatabaseSeeder extends Seeder
 
 
 
-//        Product::factory()
-//            ->count(50)
-//            ->create();
-//
-//
-//
-//        User::factory()->create([
-//            'name' => 'Test User',
-//            'email' => 'test@example.com'
-//            ]);
-//
-//
-////        Reservation::factory()
-//            ->count(100)
-//            ->create();
+        Product::factory()
+            ->count(50)
+            ->create();
+
+
+
+        User::factory()->create([
+            'name' => 'Test User',
+            'email' => 'test@example.com'
+            ]);
+
+
+        Reservation::factory()
+            ->count(100)
+            ->create();
 
     }
 }
