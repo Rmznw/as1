@@ -12,9 +12,10 @@ class RestaurantFactory extends Factory
     {
         return [
             'city_id'=>City::factory(),
-            'name'=>$this->faker->company(),
-            'address'=>$this->faker->address(),
-            'description'=>$this->faker->paragraph(),
+            'name'=>fake()->company(),
+            'address'=>fake()->address(),
+            'description'=>fake()->paragraph(),
         ];
     }
 }
+
